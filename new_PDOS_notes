@@ -1,0 +1,13 @@
+new PDOS analysis
+
+
+cp ./stp2_SC_calc/{POTCAR,KPOINTS,job.mpi} ./
+cp ./../CONTCAR ./
+
+mkdir new_PDOS
+cp ./{POTCAR,KPOINTS,job.mpi} ./new_PDOS/
+cp ./CONTCAR ./new_PDOS/POSCAR
+cp /scratch/summit/whale@xsede.org/computations/LSM_system/new_completly_frozen/LSM_O/b/iv/new_PDOS/INCAR ./new_PDOS/INCAR
+sbatch ./new_PDOS/job.mpi
+
+
